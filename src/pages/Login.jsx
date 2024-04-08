@@ -10,14 +10,18 @@ const Login = () => {
     const {
         register,
         handleSubmit,
+        resetField,
         
       } = useForm()
 
       const onSubmit = (data) => {
+       
         
         const{email, password}= data;
         signIn(email, password)
         .then(result=>{
+            resetField("email")
+            resetField("password")
             console.log(result.user)
         })
         .catch(error=>{

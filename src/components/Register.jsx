@@ -10,6 +10,7 @@ const Register = () => {
     const {
         register,
         handleSubmit,
+        resetField,
         
       } = useForm()
     
@@ -17,6 +18,10 @@ const Register = () => {
         const{email, password}= data;
         createUser(email, password)
         .then(result=>{
+            resetField("name")
+            resetField("email")
+            resetField("photoUrl")
+            resetField("password")
             console.log(result.user)
         })
         .catch(error=>{
