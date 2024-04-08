@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const Nav = () => {
+  const {user,logOut}= useContext(AuthContext)
+  console.log(user)
+  const handleLogOut=()=>{
+    logOut();
+  }
   const links =<>
   <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/'}>Home</NavLink>
   <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/update'}>Update Profile</NavLink>
@@ -30,19 +37,24 @@ const Nav = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <Link to={'/login'}><button className="btn text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Login</button></Link>
-  {/* <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
+  
+  {user?<> <div className="dropdown dropdown-end flex flex-row gap-3">
+      <div tabIndex={0} role="tooltip" className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user.email}>
+        <div className="w-10 rounded-full " >
           <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+    
        
-        <li><a>Name</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div> */}
+       
+        
+      
+     <div>
+     <button onClick={handleLogOut} className="btn text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Log Out</button>
+     </div>
+
+
+    </div></> : <Link to={'/login'}><button className="btn text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Login</button></Link> }
   </div>
 </div>
             

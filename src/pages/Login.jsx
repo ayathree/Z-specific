@@ -1,33 +1,49 @@
+import { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
 
 const Login = () => {
-    const handleLogin =e =>{
-        e.preventDefault();
-       
-        const email = e.target.email.value;
-       
-        const password = e.target.password.value;
-        console.log(email,password)
-    }
+    const {signIn}= useContext(AuthContext)
+
+    const {
+        register,
+        handleSubmit,
+        
+      } = useForm()
+
+      const onSubmit = (data) => {
+        
+        const{email, password}= data;
+        signIn(email, password)
+        .then(result=>{
+            console.log(result.user)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+
+      }
+    
     return (
         <div>
            <div className="hero min-h-screen">
   <div className="hero-content">
    
     <div className="rounded-3xl border-2  lg:w-full  shadow-2xl bg-gradient-to-r from-blue-500 to-red-600">
-      <form onSubmit={handleLogin} className="card-body lg:p-20">
+      <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:p-20">
         <div className="form-control ">
           <label className="label ">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered lg:w-[350px] rounded-3xl" required />
+          <input type="email" placeholder="email" name="email" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("email", { required: true })} />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required />
+          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { required: true })}/>
          
         </div>
         <div className="form-control mt-6">
