@@ -10,11 +10,11 @@ const Nav = () => {
     logOut();
   }
   const links =<>
-  <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/'}>Home</NavLink>
+  <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-gray-300 to-black ':'lg:text-white font-semibold lg:text-xl'} to={'/'}>Home</NavLink>
   
-  <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/about'}>About</NavLink>
+  <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-gray-300 to-black ':'lg:text-white font-semibold lg:text-xl'} to={'/about'}>About</NavLink>
   {
-    user && <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/update'}>Update Profile</NavLink>
+    user && <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-gray-300 to-black ':'lg:text-white font-semibold lg:text-xl'} to={'/update'}>Update Profile</NavLink>
   }
   
   
@@ -27,7 +27,7 @@ const Nav = () => {
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="white"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52">
         {links}
       </ul>
     </div>
@@ -53,11 +53,11 @@ const Nav = () => {
         
       
      <div>
-     <button onClick={handleLogOut} className="lg:btn btn-sm lg:text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Log Out</button>
+     <button onClick={handleLogOut} className="lg:btn btn-sm lg:text-xl lg:border-red-600 lg:border-4  bg-white lg:text-red-600 ">Log Out</button>
      </div>
 
 
-    </div></> : <Link to={'/login'}><button className="lg:btn btn-sm lg:text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Login</button></Link> }
+    </div></> : <Link to={'/login'}><button className="lg:btn btn-sm lg:text-xl lg:border-red-600 lg:border-4  bg-white  lg:text-red-600">Login</button></Link> }
   </div>
 </div>
             

@@ -3,120 +3,72 @@
     "id": 1,
     "estate_title": "Modern Hospital",
     "segment_name": "Hospitals",
-    "description": "State-of-the-art medical facility equipped with advanced technology.",
+    "description": "Experience cutting-edge medical care at our state-of-the-art hospital located in the bustling City Center. This advanced facility spans 15,000 square feet and is equipped with the latest technology, including specialized departments such as the Emergency Ward, Intensive Care Unit (ICU), and MRI Center. Our hospital prioritizes patient comfort and quality care, offering a soothing environment and expert medical staff. Ideal for healthcare investors seeking a premium healthcare facility in a prime urban location.",
     "price": "$2,500,000",
     "status": "sale",
     "area": "15,000 sq ft",
     "location": "City Center",
     "facilities": ["Emergency Ward", "ICU", "MRI Center"],
-    "image": "hospital_image.jpg"
+    "image": "https://i.ibb.co/S50CJ4s/2f635cf35219c2607cd7a084da8999a7.jpg"
   },
   {
     "id": 2,
     "estate_title": "Luxury School Campus",
     "segment_name": "Schools",
-    "description": "Premier educational institute with modern classrooms and sports facilities.",
+    "description": "Discover excellence in education at our premier Luxury School Campus nestled in a serene Suburban Area. Spread across 20 acres of landscaped grounds, this institute features modern classrooms, expansive sports facilities including a Football Field, and a well-stocked Library. Our campus fosters holistic development, providing students with a stimulating environment to excel academically and athletically. Ideal for educational institutions seeking a prestigious campus with ample space and top-notch facilities.",
     "price": "$1,200,000",
     "status": "sale",
     "area": "20 acres",
     "location": "Suburban Area",
     "facilities": ["Science Labs", "Football Field", "Library"],
-    "image": "school_image.jpg"
-  },
-  {
-    "id": 10,
-    "estate_title": "International Baccalaureate School",
-    "segment_name": "Schools",
-    "description": "Prestigious school offering IB curriculum and global education.",
-    "price": "$2,800,000",
-    "status": "sale",
-    "area": "25 acres",
-    "location": "Suburban Area",
-    "facilities": ["IB Classrooms", "Science Labs", "Sports Complex"],
-    "image": "ib_school_image.jpg"
+    "image": "https://i.ibb.co/px4ct92/1eb5d07edb4f4437adea3fcd72bbe633.jpg"
   },
   {
     "id": 3,
     "estate_title": "Historic Cathedral",
     "segment_name": "Religious Facilities",
-    "description": "Architecturally significant cathedral with rich cultural heritage.",
+    "description": "Immerse yourself in the rich cultural heritage of our Historic Cathedral located in Downtown. This architecturally significant landmark spans 10,000 square feet and features a majestic Bell Tower, a serene Choir Room, and intricately crafted Stained Glass Windows. Our cathedral is a symbol of spiritual reverence and community connection, ideal for religious organizations seeking a historic space with distinctive charm and character.",
     "price": "$800,000",
     "status": "sale",
     "area": "10,000 sq ft",
     "location": "Downtown",
     "facilities": ["Bell Tower", "Choir Room", "Stained Glass Windows"],
-    "image": "cathedral_image.jpg"
+    "image": "https://i.ibb.co/GQRkRkn/csm-Cathedral-of-Exeter-edit-f9436e2bd4.jpg"
   },
   {
     "id": 4,
     "estate_title": "Transport Hub",
     "segment_name": "Transportation Terminals",
-    "description": "Busy transport hub connecting multiple modes of transportation.",
+    "description": "Experience seamless connectivity at our bustling Transport Hub situated in the dynamic Industrial Zone. Spanning an impressive 50,000 square feet, this hub connects multiple modes of transportation including a comprehensive Bus Terminal, Train Platform, and Taxi Stand. Ideal for transportation operators seeking a strategic location with high foot traffic and excellent accessibility.",
     "price": "$3,000,000",
     "status": "sale",
     "area": "50,000 sq ft",
     "location": "Industrial Zone",
     "facilities": ["Bus Terminal", "Train Platform", "Taxi Stand"],
-    "image": "transport_hub_image.jpg"
+    "image": "https://i.ibb.co/3k6BMn3/525-Koge-Nord-Station-1.jpg"
   },
   {
     "id": 5,
     "estate_title": "Grand Convention Center",
     "segment_name": "Convention Centers",
-    "description": "Versatile convention center suitable for large events and gatherings.",
+    "description": "Host unforgettable events at our expansive Grand Convention Center located in the vibrant Commercial District. Spanning an impressive 100,000 square feet, this versatile venue features an elegant Auditorium, spacious Exhibition Halls, and well-equipped Meeting Rooms. Our convention center is ideal for event planners and organizations seeking a premium venue with state-of-the-art facilities and prime city location.",
     "price": "$5,000,000",
     "status": "sale",
     "area": "100,000 sq ft",
     "location": "Commercial District",
     "facilities": ["Auditorium", "Exhibition Halls", "Meeting Rooms"],
-    "image": "convention_center_image.jpg"
+    "image": "https://i.ibb.co/cv4h609/Kentucky-International-Convention-Center-Exterior-3-1900-1600x1069.jpg"
   },
   {
     "id": 6,
     "estate_title": "Contemporary Art Gallery",
     "segment_name": "Art Galleries",
-    "description": "Modern art gallery showcasing cutting-edge contemporary works.",
+    "description": "Explore cutting-edge contemporary art at our vibrant Contemporary Art Gallery situated in the eclectic Art District. Spanning 5,000 square feet, this gallery showcases innovative artworks in inspiring Gallery Spaces, hosts engaging Events in a versatile Event Space, and offers a cozy Café for art enthusiasts. Ideal for art investors and curators seeking a dynamic space to exhibit and promote modern art.",
     "price": "$600,000",
     "status": "rent",
     "area": "5,000 sq ft",
     "location": "Art District",
     "facilities": ["Gallery Spaces", "Event Space", "Café"],
-    "image": "art_gallery_image.jpg"
-  },
-  {
-    "id": 7,
-  "estate_title": "International Baccalaureate School",
-  "segment_name": "Schools",
-  "description": "Prestigious school offering IB curriculum and global education.",
-  "price": "$2,800,000",
-  "status": "sale",
-  "area": "25 acres",
-  "location": "Suburban Area",
-  "facilities": ["IB Classrooms", "Science Labs", "Sports Complex"],
-  "image": "ib_school_image.jpg"
-  },
-  {
-    "id": 8,
-    "estate_title": "Rural Chapel",
-    "segment_name": "Religious Facilities",
-    "description": "Small countryside chapel offering spiritual services.",
-    "price": "$200,000",
-    "status": "sale",
-    "area": "2,000 sq ft",
-    "location": "Rural Area",
-    "facilities": ["Chapel Hall", "Gardens", "Prayer Room"],
-    "image": "rural_chapel_image.jpg"
-  },
-  {
-    "id": 9,
-    "estate_title": "Urban Subway Station",
-    "segment_name": "Transportation Terminals",
-    "description": "Key subway station in the heart of the city.",
-    "price": "$10,000,000",
-    "status": "sale",
-    "area": "30,000 sq ft",
-    "location": "Metropolitan Area",
-    "facilities": ["Platform", "Ticket Booths", "Escalators"],
-    "image": "subway_station_image.jpg"
+    "image": "https://i.ibb.co/0rZptgp/ag-doc-2201-0001-pub.jpg"
   }
 ]

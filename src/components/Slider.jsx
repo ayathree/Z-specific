@@ -43,7 +43,7 @@ const Slider = () => {
         navigation={true}
         modules={[Parallax,Autoplay, Pagination, Navigation]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
-        className="mySwiper carousel w-full lg:h-[400px] h-[200px] border-2 border-red-600 rounded-3xl shadow-2xl"
+        className="mySwiper carousel w-full lg:h-[400px] h-[200px] border-2 border-white rounded-3xl shadow-2xl"
       >
         <div
           slot="container-start"

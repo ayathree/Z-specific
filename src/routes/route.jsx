@@ -7,6 +7,8 @@ import Login from "../pages/Login";
 import Register from "../components/Register";
 import PrivateRoute from "../private/PrivateRoute";
 
+import CardDetails from "../pages/CardDetails";
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -14,7 +16,14 @@ const router = createBrowserRouter([
       children:[
         {
           path:'/',
-          element:<Home></Home>
+          element:<Home></Home>,
+          loader:()=>fetch('/API.json')
+        },
+        {
+          path:'/card/:id',
+          
+          element:<PrivateRoute><CardDetails></CardDetails></PrivateRoute>,
+          loader: ()=> fetch('/API.json'),
         },
         {
           path:'/update',

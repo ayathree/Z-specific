@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa"
@@ -8,6 +8,7 @@ import { FaGoogle } from "react-icons/fa"
 
 const Login = () => {
     const {signIn, google, github}= useContext(AuthContext)
+    const navigate = useNavigate();
 
     const {
         register,
@@ -24,6 +25,7 @@ const Login = () => {
         .then(result=>{
             resetField("email")
             resetField("password")
+            navigate('/');
             console.log(result.user)
         })
         .catch(error=>{
@@ -34,6 +36,7 @@ const Login = () => {
       const handleGoogle =()=>{
         google()
         .then(result=>{
+          navigate('/');
           console.log(result.user)
         })
         .catch(error=>{
@@ -43,6 +46,7 @@ const Login = () => {
       const handleGithub =()=>{
         github()
         .then(result=>{
+          navigate('/');
           console.log(result.user)
         })
         .catch(error=>{
@@ -55,32 +59,32 @@ const Login = () => {
            <div className="hero min-h-screen">
   <div className="hero-content">
    
-    <div className="rounded-3xl border-2  lg:w-full  shadow-2xl bg-gradient-to-r from-blue-500 to-red-600">
+    <div className="rounded-3xl border-2  lg:w-full  shadow-2xl bg-gradient-to-r from-black to-gray-300">
       <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:p-20">
         <div className="form-control ">
           <label className="label ">
-            <span className="label-text">Email</span>
+            <span className="label-text text-white">Email</span>
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("email", { required: true })} />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text text-white">Password</span>
           </label>
           <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { required: true })}/>
          
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">Login</button>
+          <button className="btn border-red-600 border-4 bg-white text-red-600 font-semibold lg:text-xl">Login</button>
          
         </div>
-        <Link to={'/register'}><p>Do not have an account?Please <span className="text-blue-600 font-semibold">Register</span></p></Link>
+        <Link to={'/register'}><p className="text-white">Do not have an account?Please <span className="text-red-600 font-semibold">Register</span></p></Link>
         <br />
           <hr />
-          <p className="text-center">Or Login With</p>
-          <button onClick={handleGoogle} className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
+          <p className="text-center text-white">Or Login With</p>
+          <button onClick={handleGoogle} className="btn border-red-600 border-4 bg-white text-red-600 font-semibold lg:text-xl">
           <FaGoogle />Google</button>
-          <button onClick={handleGithub} className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
+          <button onClick={handleGithub} className="btn border-red-600 border-4 bg-white text-red-600 font-semibold lg:text-xl">
           <FaGithub />Github</button>
       </form>
     </div>
