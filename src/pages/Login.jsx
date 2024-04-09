@@ -2,10 +2,12 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FaGithub } from "react-icons/fa";
+import { FaGoogle } from "react-icons/fa"
 
 
 const Login = () => {
-    const {signIn}= useContext(AuthContext)
+    const {signIn, google}= useContext(AuthContext)
 
     const {
         register,
@@ -29,6 +31,15 @@ const Login = () => {
         })
 
       }
+      const handleGoogle =()=>{
+        google()
+        .then(result=>{
+          console.log(result.user)
+        })
+        .catch(error=>{
+          console.log(error)
+        })
+      }
     
     return (
         <div>
@@ -51,9 +62,17 @@ const Login = () => {
          
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">Login</button>
+         
         </div>
         <Link to={'/register'}><p>Do not have an account?Please <span className="text-blue-600 font-semibold">Register</span></p></Link>
+        <br />
+          <hr />
+          <p className="text-center">Or Login With</p>
+          <button onClick={handleGoogle} className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
+          <FaGoogle />Google</button>
+          <button className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
+          <FaGithub />Github</button>
       </form>
     </div>
   </div>

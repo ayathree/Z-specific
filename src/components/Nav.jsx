@@ -39,9 +39,9 @@ const Nav = () => {
   <div className="navbar-end">
   
   {user?<> <div className="dropdown dropdown-end flex flex-row gap-3">
-      <div tabIndex={0} role="tooltip" className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user.email}>
+      <div tabIndex={0} role="tooltip" className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user.displayName}>
         <div className="w-10 rounded-full " >
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+          <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
         </div>
       </div>
     
