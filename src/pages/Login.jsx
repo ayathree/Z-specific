@@ -7,7 +7,7 @@ import { FaGoogle } from "react-icons/fa"
 
 
 const Login = () => {
-    const {signIn, google}= useContext(AuthContext)
+    const {signIn, google, github}= useContext(AuthContext)
 
     const {
         register,
@@ -33,6 +33,15 @@ const Login = () => {
       }
       const handleGoogle =()=>{
         google()
+        .then(result=>{
+          console.log(result.user)
+        })
+        .catch(error=>{
+          console.log(error)
+        })
+      }
+      const handleGithub =()=>{
+        github()
         .then(result=>{
           console.log(result.user)
         })
@@ -71,7 +80,7 @@ const Login = () => {
           <p className="text-center">Or Login With</p>
           <button onClick={handleGoogle} className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
           <FaGoogle />Google</button>
-          <button className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
+          <button onClick={handleGithub} className="btn bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold lg:text-xl">
           <FaGithub />Github</button>
       </form>
     </div>

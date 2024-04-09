@@ -11,8 +11,11 @@ const Nav = () => {
   }
   const links =<>
   <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/'}>Home</NavLink>
-  <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/update'}>Update Profile</NavLink>
+  
   <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/about'}>About</NavLink>
+  {
+    user && <NavLink className={({isActive})=>isActive?'lg:btn lg:text-white lg:bg-gradient-to-r from-blue-500 to-red-600 ':'lg:text-white font-semibold lg:text-xl'} to={'/update'}>Update Profile</NavLink>
+  }
   
   
   </>

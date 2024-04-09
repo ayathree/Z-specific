@@ -1,192 +1,122 @@
 [
-    {
-      "id": 1,
-      "estate_title": "Modern Hospital",
-      "segment_name": "Hospitals",
-      "description": "State-of-the-art medical facility equipped with advanced technology.",
-      "price": "$2,500,000",
-      "status": "sale",
-      "area": "15,000 sq ft",
-      "location": "City Center",
-      "facilities": ["Emergency Ward", "ICU", "MRI Center"],
-      "image": "hospital_image.jpg",
-      "example":[
-        {
-            "estate_title": "Pediatric Hospital",
+  {
+    "id": 1,
+    "estate_title": "Modern Hospital",
     "segment_name": "Hospitals",
-    "description": "Specialized hospital focused on pediatric care.",
-    "price": "$1,800,000",
+    "description": "State-of-the-art medical facility equipped with advanced technology.",
+    "price": "$2,500,000",
     "status": "sale",
-    "area": "8,000 sq ft",
-    "location": "Suburban Area",
-    "facilities": ["Pediatric Wing", "Play Area", "Family Rooms"],
-    "image": "pediatric_hospital_image.jpg"
-
-        },
-        {
-            "estate_title": "Psychiatric Hospital",
-    "segment_name": "Hospitals",
-    "description": "Hospital specializing in mental health care and treatments.",
-    "price": "$2,200,000",
-    "status": "sale",
-    "area": "20,000 sq ft",
-    "location": "Suburban Area",
-    "facilities": ["Therapy Rooms", "Activity Areas", "Quiet Spaces"],
-    "image": "psychiatric_hospital_image.jpg"
-
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "estate_title": "Luxury School Campus",
-      "segment_name": "Schools",
-      "description": "Premier educational institute with modern classrooms and sports facilities.",
-      "price": "$1,200,000",
-      "status": "sale",
-      "area": "20 acres",
-      "location": "Suburban Area",
-      "facilities": ["Science Labs", "Football Field", "Library"],
-      "image": "school_image.jpg",
-      "example":[
-        {
-            "estate_title": "International School",
+    "area": "15,000 sq ft",
+    "location": "City Center",
+    "facilities": ["Emergency Ward", "ICU", "MRI Center"],
+    "image": "hospital_image.jpg"
+  },
+  {
+    "id": 2,
+    "estate_title": "Luxury School Campus",
     "segment_name": "Schools",
-    "description": "Multicultural school offering IB curriculum.",
-    "price": "$2,000,000",
+    "description": "Premier educational institute with modern classrooms and sports facilities.",
+    "price": "$1,200,000",
     "status": "sale",
-    "area": "30 acres",
-    "location": "Urban Area",
-    "facilities": ["Outdoor Sports Fields", "Dormitories", "Auditorium"],
-    "image": "international_school_image.jpg"
-        },
-        {
-            "estate_title": "Montessori School",
-            "segment_name": "Schools",
-            "description": "Montessori education emphasizing self-directed learning.",
-            "price": "$1,500,000",
-            "status": "sale",
-            "area": "15 acres",
-            "location": "Suburban Area",
-            "facilities": ["Montessori Classrooms", "Outdoor Play Area", "Parent Lounge"],
-            "image": "montessori_school_image.jpg"
-        },
-        {
-            "estate_title": "Music Academy",
+    "area": "20 acres",
+    "location": "Suburban Area",
+    "facilities": ["Science Labs", "Football Field", "Library"],
+    "image": "school_image.jpg"
+  },
+  {
+    "id": 10,
+    "estate_title": "International Baccalaureate School",
     "segment_name": "Schools",
-    "description": "Specialized academy for music education and performance.",
-    "price": "$1,000,000",
+    "description": "Prestigious school offering IB curriculum and global education.",
+    "price": "$2,800,000",
     "status": "sale",
-    "area": "5,000 sq ft",
-    "location": "Arts District",
-    "facilities": ["Practice Rooms", "Recital Hall", "Instrument Rental"],
-    "image": "music_academy_image.jpg"
-        }
-      ]
-
-    },
-    {
-      "id": 3,
-      "estate_title": "Historic Cathedral",
-      "segment_name": "Religious Facilities",
-      "description": "Architecturally significant cathedral with rich cultural heritage.",
-      "price": "$800,000",
-      "status": "sale",
-      "area": "10,000 sq ft",
-      "location": "Downtown",
-      "facilities": ["Bell Tower", "Choir Room", "Stained Glass Windows"],
-      "image": "cathedral_image.jpg",
-      "example":[
-        {
-            "estate_title": "Mosque and Islamic Center",
+    "area": "25 acres",
+    "location": "Suburban Area",
+    "facilities": ["IB Classrooms", "Science Labs", "Sports Complex"],
+    "image": "ib_school_image.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Historic Cathedral",
     "segment_name": "Religious Facilities",
-    "description": "Community mosque with educational facilities.",
-    "price": "$600,000",
+    "description": "Architecturally significant cathedral with rich cultural heritage.",
+    "price": "$800,000",
     "status": "sale",
-    "area": "5,000 sq ft",
-    "location": "Residential Neighborhood",
-    "facilities": ["Prayer Hall", "Classrooms", "Library"],
-    "image": "mosque_image.jpg"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "estate_title": "Transport Hub",
-      "segment_name": "Transportation Terminals",
-      "description": "Busy transport hub connecting multiple modes of transportation.",
-      "price": "$3,000,000",
-      "status": "sale",
-      "area": "50,000 sq ft",
-      "location": "Industrial Zone",
-      "facilities": ["Bus Terminal", "Train Platform", "Taxi Stand"],
-      "image": "transport_hub_image.jpg",
-      "example":[
-        {
-            "estate_title": "International Airport",
-    "segment_name": "Transportation Terminals",
-    "description": "Major international airport hub with multiple terminals.",
-    "price": "$50,000,000",
-    "status": "sale",
-    "area": "500,000 sq ft",
-    "location": "Metropolitan Area",
-    "facilities": ["Runways", "Customs Area", "Duty-Free Shops"],
-    "image": "airport_image.jpg"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "estate_title": "Grand Convention Center",
-      "segment_name": "Convention Centers",
-      "description": "Versatile convention center suitable for large events and gatherings.",
-      "price": "$5,000,000",
-      "status": "sale",
-      "area": "100,000 sq ft",
-      "location": "Commercial District",
-      "facilities": ["Auditorium", "Exhibition Halls", "Meeting Rooms"],
-      "image": "convention_center_image.jpg",
-      "example":[
-        {
-            "estate_title": "Exhibition and Trade Center",
-    "segment_name": "Convention Centers",
-    "description": "Specialized center for exhibitions and trade events.",
-    "price": "$3,500,000",
-    "status": "sale",
-    "area": "80,000 sq ft",
-    "location": "Business District",
-    "facilities": ["Exhibition Halls", "Conference Rooms", "Catering Services"],
-    "image": "exhibition_center_image.jpg"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "estate_title": "Contemporary Art Gallery",
-      "segment_name": "Art Galleries",
-      "description": "Modern art gallery showcasing cutting-edge contemporary works.",
-      "price": "$600,000",
-      "status": "rent",
-      "area": "5,000 sq ft",
-      "location": "Art District",
-      "facilities": ["Gallery Spaces", "Event Space", "Café"],
-      "image": "art_gallery_image.jpg",
-      "example":[
-        {
-            "estate_title": "Modern Sculpture Gallery",
-    "segment_name": "Art Galleries",
-    "description": "Gallery dedicated to contemporary sculpture art.",
-    "price": "$900,000",
-    "status": "rent",
-    "area": "3,000 sq ft",
+    "area": "10,000 sq ft",
     "location": "Downtown",
-    "facilities": ["Sculpture Garden", "Workshop Space", "Art Store"],
-    "image": "sculpture_gallery_image.jpg"
-        }
-      ]
-    }
-    
-    
-    
-  ]
-  
+    "facilities": ["Bell Tower", "Choir Room", "Stained Glass Windows"],
+    "image": "cathedral_image.jpg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Transport Hub",
+    "segment_name": "Transportation Terminals",
+    "description": "Busy transport hub connecting multiple modes of transportation.",
+    "price": "$3,000,000",
+    "status": "sale",
+    "area": "50,000 sq ft",
+    "location": "Industrial Zone",
+    "facilities": ["Bus Terminal", "Train Platform", "Taxi Stand"],
+    "image": "transport_hub_image.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Grand Convention Center",
+    "segment_name": "Convention Centers",
+    "description": "Versatile convention center suitable for large events and gatherings.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "100,000 sq ft",
+    "location": "Commercial District",
+    "facilities": ["Auditorium", "Exhibition Halls", "Meeting Rooms"],
+    "image": "convention_center_image.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Contemporary Art Gallery",
+    "segment_name": "Art Galleries",
+    "description": "Modern art gallery showcasing cutting-edge contemporary works.",
+    "price": "$600,000",
+    "status": "rent",
+    "area": "5,000 sq ft",
+    "location": "Art District",
+    "facilities": ["Gallery Spaces", "Event Space", "Café"],
+    "image": "art_gallery_image.jpg"
+  },
+  {
+    "id": 7,
+  "estate_title": "International Baccalaureate School",
+  "segment_name": "Schools",
+  "description": "Prestigious school offering IB curriculum and global education.",
+  "price": "$2,800,000",
+  "status": "sale",
+  "area": "25 acres",
+  "location": "Suburban Area",
+  "facilities": ["IB Classrooms", "Science Labs", "Sports Complex"],
+  "image": "ib_school_image.jpg"
+  },
+  {
+    "id": 8,
+    "estate_title": "Rural Chapel",
+    "segment_name": "Religious Facilities",
+    "description": "Small countryside chapel offering spiritual services.",
+    "price": "$200,000",
+    "status": "sale",
+    "area": "2,000 sq ft",
+    "location": "Rural Area",
+    "facilities": ["Chapel Hall", "Gardens", "Prayer Room"],
+    "image": "rural_chapel_image.jpg"
+  },
+  {
+    "id": 9,
+    "estate_title": "Urban Subway Station",
+    "segment_name": "Transportation Terminals",
+    "description": "Key subway station in the heart of the city.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "30,000 sq ft",
+    "location": "Metropolitan Area",
+    "facilities": ["Platform", "Ticket Booths", "Escalators"],
+    "image": "subway_station_image.jpg"
+  }
+]

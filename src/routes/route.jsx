@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../components/Register";
+import PrivateRoute from "../private/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +18,11 @@ const router = createBrowserRouter([
         },
         {
           path:'/update',
-          element:<Update></Update>
+          element:<PrivateRoute><Update></Update></PrivateRoute>
         },
         {
           path:'/about',
-          element:<About></About>
+          element:<PrivateRoute><About></About></PrivateRoute>
         },
         {
           path:'/login',
