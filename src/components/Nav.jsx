@@ -31,8 +31,8 @@ const Nav = () => {
         {links}
       </ul>
     </div>
-    <img className="w-[50px] h-[50px]" src="/zarx.png" alt="" />
-    <a className="text-white text-3xl font-extrabold">Specific</a>
+    <img className="lg:w-[50px] lg:h-[50px] w-[20px] h-[20px]" src="/zarx.png" alt="" />
+    <a className="text-white lg:text-3xl lg:font-extrabold">Specific</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -42,7 +42,7 @@ const Nav = () => {
   <div className="navbar-end">
   
   {user?<> <div className="dropdown dropdown-end flex flex-row gap-3">
-      <div tabIndex={0} role="tooltip" className="btn btn-ghost btn-circle avatar tooltip tooltip-left" data-tip={user.displayName}>
+      <div tabIndex={0} role="tooltip" className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom lg:tooltip-left" data-tip={user.displayName}>
         <div className="w-10 rounded-full " >
           <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
         </div>
@@ -53,11 +53,11 @@ const Nav = () => {
         
       
      <div>
-     <button onClick={handleLogOut} className="btn text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Log Out</button>
+     <button onClick={handleLogOut} className="lg:btn btn-sm lg:text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Log Out</button>
      </div>
 
 
-    </div></> : <Link to={'/login'}><button className="btn text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Login</button></Link> }
+    </div></> : <Link to={'/login'}><button className="lg:btn btn-sm lg:text-xl text-white  bg-gradient-to-r from-blue-500 to-red-600">Login</button></Link> }
   </div>
 </div>
             
