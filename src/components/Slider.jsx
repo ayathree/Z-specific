@@ -58,11 +58,7 @@ const Slider = () => {
             Hospitals
           </div>
           
-          <div className="text-black font-semibold lg:text-xl  text-center" data-swiper-parallax="-100">
-            <p>
-              Hospitals with great service
-            </p>
-          </div>
+          
         </div>
         </div>
         
@@ -76,11 +72,7 @@ const Slider = () => {
             Schools
           </div>
           
-          <div className="text-black font-semibold lg:text-xl  text-center" data-swiper-parallax="-100">
-            <p>
-              Ensure good educational environment.
-            </p>
-          </div>
+          
         </div>
         </div>
         
@@ -95,11 +87,7 @@ const Slider = () => {
             Art Galleries
           </div>
           
-          <div className="text-black font-semibold lg:text-xl  text-center" data-swiper-parallax="-100">
-            <p>
-             Best art galleries, fascinating areas and art collections.
-            </p>
-          </div>
+          
         </div>
         </div>
         
@@ -115,11 +103,7 @@ const Slider = () => {
             Convention Centers
           </div>
           
-          <div className="text-white font-semibold lg:text-xl  text-center" data-swiper-parallax="-100">
-            <p>
-               Convention centers with providing world class service. 
-            </p>
-          </div>
+         
         </div>
         </div>
         
