@@ -8,11 +8,13 @@ import Register from "../components/Register";
 import PrivateRoute from "../private/PrivateRoute";
 
 import CardDetails from "../pages/CardDetails";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element:<Root></Root>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:'/',

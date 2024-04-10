@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 const Register = () => {
     const {createUser}= useContext(AuthContext);
     const navigate = useNavigate();
+    
 
     const {
         register,

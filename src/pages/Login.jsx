@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa"
@@ -9,6 +9,8 @@ import { FaGoogle } from "react-icons/fa"
 const Login = () => {
     const {signIn, google, github}= useContext(AuthContext)
     const navigate = useNavigate();
+    const location =useLocation();
+    console.log(location)
 
     const {
         register,
@@ -25,7 +27,7 @@ const Login = () => {
         .then(result=>{
             resetField("email")
             resetField("password")
-            navigate('/');
+            navigate(location?.state? location.state:'/');
             console.log(result.user)
         })
         .catch(error=>{
@@ -36,7 +38,7 @@ const Login = () => {
       const handleGoogle =()=>{
         google()
         .then(result=>{
-          navigate('/');
+          navigate(location?.state? location.state:'/');
           console.log(result.user)
         })
         .catch(error=>{
@@ -46,7 +48,7 @@ const Login = () => {
       const handleGithub =()=>{
         github()
         .then(result=>{
-          navigate('/');
+          navigate(location?.state? location.state:'/');
           console.log(result.user)
         })
         .catch(error=>{
