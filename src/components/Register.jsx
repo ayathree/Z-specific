@@ -32,7 +32,7 @@ const Register = () => {
     }
     
     return (
-        <div>
+        <div data-aos="flip-left"  data-aos-duration="1000" >
              <div className="hero min-h-screen">
   <div className="hero-content">
    

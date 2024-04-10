@@ -3,6 +3,8 @@ import { MdOutlinePriceChange,  } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaChartArea } from "react-icons/fa";
 
+
+
 const CardDetails = () => {
     
     const cards = useLoaderData();
@@ -13,14 +15,14 @@ const CardDetails = () => {
     console.log(cards,id)
     
     return (
-        <div>
+        <div data-aos="zoom-in-right" data-aos-duration="1000">
             
-      <h1 className="lg:text-5xl font-bold text-white text-center ">{card.estate_title}</h1>
-            <div className="hero min-h-scree">
+            <div   className="hero min-h-scree">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <img  src={card.image} className=" rounded-lg border-4 lg:max-w-lg border-white" />
     <div>
       
+      <h1 className="lg:text-5xl font-bold text-white  ">{card.estate_title}</h1>
         <div className='flex flex-row gap-3  item-center mt-6'>
             <p className='lg:text-2xl text-white font-bold underline underline-offset-4'>Category:</p>
             <p className='text-white lg:text-2xl'>{card.segment_name}</p>

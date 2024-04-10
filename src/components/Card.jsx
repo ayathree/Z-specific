@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const Card = ({card}) => {
     const{image,estate_title,id}=card
     return (
         <div>
-            <div  className="card card-compact  p-11 ">
+            <div data-aos="zoom-in" data-aos-duration="1000" className="card card-compact  p-11 ">
             <figure><img className="h-[250px] w-[500px] border-4 border-white rounded-3xl" src={image} alt="" /></figure>
             <div className="card-body ">
               <h2 className="card-title  text-white text-xl">{estate_title}</h2>
