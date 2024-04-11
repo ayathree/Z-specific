@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa"
 
 
+
 const Login = () => {
     const {signIn, google, github}= useContext(AuthContext)
     const navigate = useNavigate();
@@ -55,6 +56,8 @@ const Login = () => {
           console.log(error)
         })
       }
+
+      
     
     return (
         <div data-aos="flip-left"  data-aos-duration="1000" >

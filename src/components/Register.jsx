@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
+import { updateProfile } from "firebase/auth";
+
 
 
 const Register = () => {
@@ -17,20 +19,30 @@ const Register = () => {
       } = useForm()
     
     const onSubmit = (data) => {
-        const{email, password}= data;
+        const{name, email, photoUrl, password}= data;
         createUser(email, password)
         .then(result=>{
+
             resetField("name")
             resetField("email")
             resetField("photoUrl")
             resetField("password")
             navigate('/');
             console.log(result.user)
+            updateProfile(result.user, {
+              displayName:name,
+              photoURL:photoUrl
+
+            })
+            .then(()=>console.log('profile updated'))
+            .catch((error)=>console.log(error))
         })
         .catch(error=>{
             console.log(error)
         })
     }
+
+    
     
     return (
         <div data-aos="flip-left"  data-aos-duration="1000" >
