@@ -7,7 +7,7 @@ import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
-    const {createUser}= useContext(AuthContext);
+    const {createUser,logOut}= useContext(AuthContext);
     const navigate = useNavigate();
     
 
@@ -27,7 +27,8 @@ const Register = () => {
             resetField("email")
             resetField("photoUrl")
             resetField("password")
-            navigate('/');
+            navigate('/login');
+            logOut()
             console.log(result.user)
             updateProfile(result.user, {
               displayName:name,
