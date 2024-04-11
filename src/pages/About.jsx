@@ -1,10 +1,12 @@
 import start from '../assets/start.jpg'
 import mission from '../assets/mission.png'
 import qna from '../assets/answer.jpeg'
+import PageTitle from './PageTitle';
 
 const About = () => {
     return (
         <div>
+          <PageTitle title={'About'}></PageTitle>
            <div data-aos="fade-left"  data-aos-duration="1000" className="hero mt-10 ">
   <div className="hero-content flex-col lg:flex-row">
     <img src={start} className="lg:max-w-lg rounded-lg shadow-2xl border-4 border-white h-[250px] w-[400px]" />

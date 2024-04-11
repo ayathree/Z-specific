@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
+import PageTitle from "../pages/PageTitle";
 
 
 
@@ -47,6 +48,7 @@ const Register = () => {
     
     return (
         <div data-aos="flip-left"  data-aos-duration="1000" >
+          <PageTitle title={'Register'}></PageTitle>
              <div className="hero min-h-screen">
   <div className="hero-content">
    

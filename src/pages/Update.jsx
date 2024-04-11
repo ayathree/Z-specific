@@ -3,6 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { onAuthStateChanged, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import {useNavigate}from 'react-router-dom'
+import PageTitle from "./PageTitle";
 
 
 const Update = () => {
@@ -50,6 +51,7 @@ const Update = () => {
    
     return (
         <div  data-aos="zoom-in-right" data-aos-duration="1000">
+            <PageTitle title={'Update Profile'}></PageTitle>
             
                 <div className="hero  min-h-scree">
   <div className="hero-content flex-col lg:flex-row lg:gap-44">

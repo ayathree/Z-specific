@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import Slider from "../components/Slider";
 import { useLoaderData} from 'react-router-dom'
 import home from '../assets/home.gif'
+import PageTitle from "./PageTitle";
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
  
     return (
         <div>
+          <PageTitle title={'Z Specific-Home'}></PageTitle>
           
           <Slider></Slider> 
           <div className="mt-20">

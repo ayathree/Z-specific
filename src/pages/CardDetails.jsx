@@ -2,6 +2,7 @@ import { useLoaderData,useParams} from 'react-router-dom'
 import { MdOutlinePriceChange,  } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaChartArea } from "react-icons/fa";
+import PageTitle from './PageTitle';
 
 
 
@@ -16,6 +17,7 @@ const CardDetails = () => {
     
     return (
         <div data-aos="zoom-in-right" data-aos-duration="1000">
+            <PageTitle title={`${card.segment_name}`}></PageTitle>
             
             <div   className="hero min-h-scree">
   <div className="hero-content flex-col lg:flex-row-reverse">

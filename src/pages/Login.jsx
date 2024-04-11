@@ -4,6 +4,7 @@ import { Link, useNavigate,useLocation } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa"
+import PageTitle from "./PageTitle";
 
 
 
@@ -60,7 +61,10 @@ const Login = () => {
       
     
     return (
-        <div data-aos="flip-left"  data-aos-duration="1000" >
+      
+       <div>
+        <PageTitle title={'Login'}></PageTitle>
+         <div data-aos="flip-left"  data-aos-duration="1000" >
            <div className="hero min-h-screen">
   <div className="hero-content">
    
@@ -96,6 +100,7 @@ const Login = () => {
   </div>
 </div> 
         </div>
+       </div>
     );
 };
 
