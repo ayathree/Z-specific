@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import PageTitle from "./PageTitle";
 
 
 const Error = () => {
     return (
         <div>
+          <PageTitle title={'Not Found'}></PageTitle>
             <div className="hero min-h-screen bg-base-200">
               
   <div className="hero-content text-center">

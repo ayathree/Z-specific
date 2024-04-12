@@ -5,12 +5,16 @@ import { AuthContext } from "../provider/AuthProvider";
 import { FaGithub } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa"
 import PageTitle from "./PageTitle";
+import Swal from 'sweetalert2'
+import { useState } from "react";
 
 
 
 const Login = () => {
     const {signIn, google, github}= useContext(AuthContext)
     const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMe, setSuccessMe]= useState('');
     const location =useLocation();
     console.log(location)
 
@@ -22,17 +26,37 @@ const Login = () => {
       } = useForm()
 
       const onSubmit = (data) => {
+        setErrorMessage('');
+        setSuccessMe('')
        
         
         const{email, password}= data;
         signIn(email, password)
         .then(result=>{
+          setSuccessMe('success')
+          
+          Swal.fire({
+           
+            text: 'successfully logged in',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }, successMe)
+             
             resetField("email")
             resetField("password")
+
             navigate(location?.state? location.state:'/');
+           
             console.log(result.user)
         })
         .catch(error=>{
+          setErrorMessage(error.message)
+          Swal.fire({
+           
+            text: 'incorrect email or password',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          }, errorMessage)
             console.log(error)
         })
 
@@ -100,6 +124,7 @@ const Login = () => {
   </div>
 </div> 
         </div>
+       
        </div>
     );
 };

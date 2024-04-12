@@ -4,32 +4,49 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { updateProfile } from "firebase/auth";
 import PageTitle from "../pages/PageTitle";
+import { useState } from "react";
+import Swal from 'sweetalert2'
+
 
 
 
 const Register = () => {
     const {createUser,logOut}= useContext(AuthContext);
     const navigate = useNavigate();
-    
+    const [errorRegi, setErrorRegi] = useState('')
+    const[successRegi, setSuccessRegi]= useState('')
 
     const {
         register,
         handleSubmit,
         resetField,
+        formState: { errors },
         
       } = useForm()
-    
-    const onSubmit = (data) => {
+      
+      const onSubmit = (data) => {
+      setErrorRegi('');
+      setSuccessRegi('')
         const{name, email, photoUrl, password}= data;
         createUser(email, password)
         .then(result=>{
+          setSuccessRegi('success')
+         
+          Swal.fire({
+           
+            text: 'successfully Registered',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }, successRegi)
+          
+          
 
             resetField("name")
             resetField("email")
             resetField("photoUrl")
             resetField("password")
-            navigate('/login');
             logOut()
+            navigate('/' );
             console.log(result.user)
             updateProfile(result.user, {
               displayName:name,
@@ -40,6 +57,16 @@ const Register = () => {
             .catch((error)=>console.log(error))
         })
         .catch(error=>{
+          
+            setErrorRegi(error.message)
+            Swal.fire({
+           
+              text: 'User email already in use',
+              icon: 'error',
+              confirmButtonText: 'Ok'
+            }, errorRegi)
+            
+          
             console.log(error)
         })
     }
@@ -77,7 +104,18 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required  {...register("password", { required: true })} />
+          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+
+  })} />
+  {errors.password && <span className="text-red-600 font-semibold">Password must have one Uppercase,
+  <br />
+  one Lowercase, at least 6 characters.</span>}
+  
+  
+  
+        
+          
+
          
         </div>
         <div className="form-control mt-6">
@@ -85,9 +123,13 @@ const Register = () => {
         </div>
         <Link to={'/login'}><p className="text-white">Already have an account?Please <span className="text-red-600 font-semibold">Login</span></p></Link>
       </form>
+     
     </div>
+   
   </div>
 </div> 
+
+
             
         </div>
     );
