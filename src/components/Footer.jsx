@@ -1,13 +1,10 @@
-import gif from '../assets/industry.gif'
+
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10  bg-gradient-to-r from-blue-500 to-red-600 text-neutral-content">
-  <aside>
-   <img className='w-[400px] h-[300px]' src={gif} alt="" />
-    <p className='font-semibold text-lg'><span className='text-red-600 font-bold text-3xl'>Z Specific</span> Industrial Community.<br/>Providing reliable facilities since 2016</p>
-  </aside> 
+            <footer className="footer p-10   border-2 border-white rounded-3xl bg-gradient-to-r from-black to-gray-300 text-neutral-content">
+ 
    
   <nav>
     <h6 className="footer-title">Social</h6> 
@@ -19,19 +16,19 @@ const Footer = () => {
     </div>
     <p className='font-semibold text-xl'>For more information send us email at</p>
         
-        <a className='text-lg text-black font-semibold link link-hover' href="">zspecific@gmail.com</a>
+        <a className='text-lg  font-semibold link link-hover underline underline-offset-2 text-white'>zspecific@gmail.com</a>
         
         <p className='font-semibold text-xl'>Need any details information??</p>
         <br />
         
-        <button className='btn text-xl  bg-gradient-to-r from-blue-500 to-red-600'>Details</button>
+        <button className='btn lg:btn-lg  btn-sm lg:text-xl border-red-600 border-4  bg-white  text-red-600'>Details</button>
 
 
     
   </nav>
-  <nav>
-    <img className='w-[100px] h-[100px]' src="/zarx.png" alt="" /> 
-    <h2 className='font-bold text-3xl'>Z Specific</h2>
+  <nav data-aos="flip-left"  data-aos-duration="2000">
+    <img  className='w-[100px] h-[100px]' src="/zarx.png" alt="" /> 
+    <h2 className='font-bold text-3xl text-black'>Z Specific</h2>
     
    
   </nav>
