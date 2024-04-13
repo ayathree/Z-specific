@@ -7,6 +7,7 @@ import { FaGoogle } from "react-icons/fa"
 import PageTitle from "./PageTitle";
 import Swal from 'sweetalert2'
 import { useState } from "react";
+import { IoIosEye , IoIosEyeOff} from "react-icons/io";
 
 
 
@@ -15,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState('');
     const [successMe, setSuccessMe]= useState('');
+    const [showPass, setShowPass]=useState(false)
     const location =useLocation();
     console.log(location)
 
@@ -104,7 +106,16 @@ const Login = () => {
           <label className="label">
             <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { required: true })}/>
+          <div className="flex flex-row items-center relative">
+          <input type={showPass?'text':'password'} placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", {  required: true 
+
+})} />
+<span className="absolute lg:right-8 md:right-20 left-40 lg:left-72 " onClick={()=>setShowPass(!showPass)}>
+  {
+    showPass?<IoIosEye></IoIosEye>:<IoIosEyeOff></IoIosEyeOff>
+  }
+</span>
+          </div>
          
         </div>
         <div className="form-control mt-6">

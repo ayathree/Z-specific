@@ -7,7 +7,7 @@ import PageTitle from "./PageTitle";
 
 
 const Update = () => {
-    const {user}=useContext(AuthContext)
+    const {user, setReload}=useContext(AuthContext)
     const [update, setUpdate]=useState(null)
    
    
@@ -37,6 +37,7 @@ const Update = () => {
 
           })
           .then(()=>{
+            setReload(true)
             e.target.reset();
             
             navigate('/update');

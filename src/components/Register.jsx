@@ -6,6 +6,7 @@ import { updateProfile } from "firebase/auth";
 import PageTitle from "../pages/PageTitle";
 import { useState } from "react";
 import Swal from 'sweetalert2'
+import { IoIosEye , IoIosEyeOff} from "react-icons/io";
 
 
 
@@ -15,6 +16,7 @@ const Register = () => {
     const navigate = useNavigate();
     const [errorRegi, setErrorRegi] = useState('')
     const[successRegi, setSuccessRegi]= useState('')
+    const [showPass, setShowPass]=useState(false)
 
     const {
         register,
@@ -45,15 +47,19 @@ const Register = () => {
             resetField("email")
             resetField("photoUrl")
             resetField("password")
-            logOut()
+           
             navigate('/' );
+            logOut();
             console.log(result.user)
             updateProfile(result.user, {
               displayName:name,
               photoURL:photoUrl
 
             })
-            .then(()=>console.log('profile updated'))
+          .then(()=>{
+            
+            console.log('profile updated')
+          })
             .catch((error)=>console.log(error))
         })
         .catch(error=>{
@@ -104,9 +110,17 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
+          <div className="flex flex-row items-center relative">
+          <input type={showPass?'text':'password'} placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", { pattern: /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/
 
-  })} />
+})} />
+<span className="absolute lg:right-8 md:right-20 left-40 lg:left-72 " onClick={()=>setShowPass(!showPass)}>
+  {
+    showPass?<IoIosEye></IoIosEye>:<IoIosEyeOff></IoIosEyeOff>
+  }
+</span>
+          </div>
+  
   {errors.password && <span className="text-red-600 font-semibold">Password must have one Uppercase,
   <br />
   one Lowercase, at least 6 characters.</span>}

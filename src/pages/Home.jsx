@@ -15,7 +15,7 @@ const Home = () => {
  
     return (
         <div>
-          <PageTitle title={'Z Specific-Home'}></PageTitle>
+          <PageTitle title={'Specific-Home'}></PageTitle>
           
           <Slider></Slider> 
           <div className="mt-20">
