@@ -67,9 +67,24 @@ const Login = () => {
         google()
         .then(result=>{
           navigate(location?.state? location.state:'/');
+          setSuccessMe('success')
+          
+          Swal.fire({
+           
+            text: 'successfully logged in',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }, successMe)
           console.log(result.user)
         })
         .catch(error=>{
+          setErrorMessage(error.message)
+          Swal.fire({
+           
+            text: 'An error occurred',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          }, errorMessage)
           console.log(error)
         })
       }
@@ -77,9 +92,24 @@ const Login = () => {
         github()
         .then(result=>{
           navigate(location?.state? location.state:'/');
+          setSuccessMe('success')
+          
+          Swal.fire({
+           
+            text: 'successfully logged in',
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          }, successMe)
           console.log(result.user)
         })
         .catch(error=>{
+          setErrorMessage(error.message)
+          Swal.fire({
+           
+            text: 'An error occurred',
+            icon: 'error',
+            confirmButtonText: 'Ok'
+          }, errorMessage)
           console.log(error)
         })
       }

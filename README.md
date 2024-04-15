@@ -1,8 +1,30 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Z Specific
 
-Currently, two official plugins are available:
+Discover Diverse Spaces - Explore Hospitals, Schools, Galleries, and More with Z specific.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Live Link
+
+[website/link](https://assignment-9-7e916.web.app)
+
+# Features
+
+- This website is small, medium and large device screen responsive.
+- In this website different types of animations has used like zoom-in, fade-left etc animations.
+- In this website every section has clearly described.
+- A user can perfectly update his/her profile by this website. 
+- A user can login by his/her google account and github account also.
+
+# npm package
+
+The npm packages which has used in this website
+
+- AOS Package
+- React Hook form
+- Swiper slider
+
+
+
+
+
+
