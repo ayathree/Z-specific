@@ -5,7 +5,7 @@ Discover Diverse Spaces - Explore Hospitals, Schools, Galleries, and More with Z
 
 # Live Link
 
-[website/link](https://assignment-9-7e916.web.app)
+[website/link](https://assignment-9-7e916.web.app/)
 
 # Features
 
