@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css'; 
+import PropTypes from 'prop-types';
 // ..
 AOS.init();
 
@@ -22,5 +23,8 @@ const Card = ({card}) => {
         </div>
     );
 };
+Card.propTypes ={
+  card:PropTypes.array
+}
 
 export default Card;

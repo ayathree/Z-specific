@@ -26,12 +26,13 @@ const Footer = () => {
 
     
   </nav>
-  <nav data-aos="flip-left"  data-aos-duration="2000">
-    <img  className='w-[100px] h-[100px]' src="/zarx.png" alt="" /> 
-    <h2 className='font-bold text-3xl text-black'>Z Specific</h2>
+  <nav >
+    <img data-aos="flip-left"  data-aos-duration="2000"  className='w-[100px] h-[100px]' src="/zarx.png" alt="" /> 
+    <h2 data-aos="flip-left"  data-aos-duration="2000" className='font-bold text-3xl text-black'>Z Specific</h2>
+    <p className="text-black mt-10 font-semibold">Copyright © 2024 - All right reserved by Z Specific Industries Ltd</p>
+  </nav>
     
    
-  </nav>
 </footer>
             
         </div>

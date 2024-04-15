@@ -1,4 +1,6 @@
 import {Helmet} from "react-helmet";
+import PropTypes from 'prop-types';
+
 
 
     const PageTitle = ({title})=>{
@@ -15,6 +17,8 @@ import {Helmet} from "react-helmet";
 
     }
    
-
+PageTitle.propTypes={
+    title:PropTypes.element
+}
 
 export default PageTitle;
