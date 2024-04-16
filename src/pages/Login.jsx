@@ -140,7 +140,7 @@ const Login = () => {
           <input type={showPass?'text':'password'} placeholder="password" name="password" className="input input-bordered lg:w-[350px] rounded-3xl" required {...register("password", {  required: true 
 
 })} />
-<span className="absolute lg:right-8 md:right-20 left-40 lg:left-72 " onClick={()=>setShowPass(!showPass)}>
+<span className="absolute lg:right-10 md:right-28 left-40 lg:left-72 " onClick={()=>setShowPass(!showPass)}>
   {
     showPass?<IoIosEye></IoIosEye>:<IoIosEyeOff></IoIosEyeOff>
   }
