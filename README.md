@@ -1,10 +1,7 @@
 
-# Website Name
-
-<span style="font-size:20px;">Z Specific</span>
+# Website Name - **Z Specific**
 
 A website for Discover Diverse Spaces information.This website  can help to explore different spaces like hospitals, schools, galleries, and more.
-
 
 
 # Live Link
@@ -12,6 +9,7 @@ A website for Discover Diverse Spaces information.This website  can help to expl
 [website/link](https://assignment-9-7e916.web.app)
 
 # Features
+
 
 - This website is small, medium and large device screen responsive.
 - In this website different types of animations has used like zoom-in, fade-left etc animations.
