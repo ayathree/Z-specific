@@ -1,7 +1,7 @@
 
 # Website Name
 
-<span style="font-size:larger;">Z Specific</span>
+<span style="font-size:20px;">Z Specific</span>
 
 A website for Discover Diverse Spaces information.This website  can help to explore different spaces like hospitals, schools, galleries, and more.
 
