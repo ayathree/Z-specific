@@ -1,5 +1,5 @@
 
-# Website Name - **Z Specific**
+# Website Name - Z Specific
 
 A website for Discover Diverse Spaces information.This website  can help to explore different spaces like hospitals, schools, galleries, and more.
 
@@ -12,7 +12,7 @@ A website for Discover Diverse Spaces information.This website  can help to expl
 
 
 - This website is small, medium and large device screen responsive.
-- In this website different types of animations has used like zoom-in, fade-left etc animations.
+- In this website different types of AOS package's animations has used like zoom-in, fade-left etc.
 - In this website every section has clearly described.
 - A user can perfectly update his/her profile by this website. 
 - A user can login by his/her google account and github account also.
