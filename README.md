@@ -1,9 +1,11 @@
 
 # Website Name
 
-## Z Specific
+Z Specific
 
-Discover Diverse Spaces - Explore Hospitals, Schools, Galleries, and More with Z specific.
+A website for Discover Diverse Spaces information.This website  can help to explore different spaces like hospitals, schools, galleries, and more.
+
+
 
 # Live Link
 
