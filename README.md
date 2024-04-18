@@ -1,5 +1,7 @@
 
-# Z Specific
+# Website Name
+
+## Z Specific
 
 Discover Diverse Spaces - Explore Hospitals, Schools, Galleries, and More with Z specific.
 
