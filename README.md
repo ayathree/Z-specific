@@ -1,7 +1,7 @@
 
 # Website Name
 
-Z Specific
+**Z Specific**
 
 A website for Discover Diverse Spaces information.This website  can help to explore different spaces like hospitals, schools, galleries, and more.
 
